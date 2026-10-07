@@ -1,7 +1,7 @@
 {
   "name": "dsh-workspace-enhancement",
   "version": "0.2.3",
-  "description": "Unified SSH remote-execution plugin for DeepSeek Harness — ProxyJump chain, SFTP filesystem, subprocess and PTY over ssh2",
+  "description": "Unified SSH remote-execution plugin for DeepSeek Harness \u2014 ProxyJump chain, SFTP filesystem, subprocess and PTY over ssh2",
   "type": "module",
   "license": "MIT",
   "author": "DobyChao (https://github.com/DobyChao)",
@@ -88,7 +88,8 @@
     "test:agent": "node scripts/test-agent.mjs",
     "test:coverage": "node --import tsx --import ./scripts/css-stub.mjs --test --experimental-test-coverage \"test/**/*.test.ts\"",
     "typecheck": "tsc --noEmit",
-    "upstream:tags": "node scripts/upstream-tags.mjs"
+    "upstream:tags": "node scripts/upstream-tags.mjs",
+    "prepare": "node scripts/ensure-core.mjs --optional && tsc && tsdown"
   },
   "keywords": [
     "deepseek-harness",
