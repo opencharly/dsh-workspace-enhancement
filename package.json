@@ -78,6 +78,7 @@
     "e2e:headed": "playwright test --config e2e/playwright.config.ts --headed",
     "e2e:report": "playwright show-report e2e/artifacts/html-report",
     "preflight": "node scripts/preflight.mjs",
+    "prepare": "node scripts/ensure-core.mjs --optional && tsc && tsdown",
     "prepack": "node scripts/ensure-core.mjs",
     "prepublishOnly": "npm run check",
     "release": "commit-and-tag-version --no-git-tag-version",
